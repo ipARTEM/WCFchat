@@ -24,7 +24,7 @@ namespace WCFchat
                
             };
             nextId++;
-            SendMsg(user.Name +"подключился к чату!",0);
+            SendMsg(": "+user.Name +"подключился к чату!",0);
             users.Add(user);
             return user.ID;
         }
@@ -35,7 +35,7 @@ namespace WCFchat
             if (user!=null)
             {
                 users.Remove(user);
-                SendMsg(user.Name+" покинул чат!",0);
+                SendMsg(": "+user.Name+" покинул чат!",0);
 
             }
         }
