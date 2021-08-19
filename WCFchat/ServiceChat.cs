@@ -24,7 +24,7 @@ namespace WCFchat
                
             };
             nextId++;
-            SendMsg(": "+user.Name +"подключился к чату!",0);
+            SendMsg(": "+user.Name +" подключился к чату!",0);
             users.Add(user);
             return user.ID;
         }
@@ -44,7 +44,7 @@ namespace WCFchat
         {
             foreach (var item in users)
             {
-                string answer = DateTime.Now.ToShortTimeString();
+                string answer = DateTime.Now.ToString("hh:mm:ss");
                 
                 var user = users.FirstOrDefault(i => i.ID == id);
                 if (user != null)
